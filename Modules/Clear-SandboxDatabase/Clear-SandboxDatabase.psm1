@@ -1,4 +1,5 @@
-function Clear-SandboxDatabase {<#
+function Clear-SandboxDatabase {
+  <#
     .SYNOPSIS
       Script to clean database.
     .DESCRIPTION
@@ -16,7 +17,7 @@ function Clear-SandboxDatabase {<#
       Purpose/Change: Initial script development
     .EXAMPLE
       <Example goes here. Repeat this attribute for more than one example>
-   #>
+  #>
 	param (
 		$VagrantUpSuceed = $true
 	)
