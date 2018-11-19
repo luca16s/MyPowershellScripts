@@ -1,5 +1,5 @@
 Import-Module Write-Log.psm1
-function Stop-Process {
+function Stop-SpecifiedProcess {
     <#
      .SYNOPSIS
        Script to close process.
@@ -45,4 +45,4 @@ function Stop-Process {
         }
     }
 }
-Export-ModuleMember -Function Stop-Process
+Export-ModuleMember -Function Stop-SpecifiedProcess
