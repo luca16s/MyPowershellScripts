@@ -13,7 +13,7 @@ Write-Output("Initializing Sandbox update...")
 Write-LineSeparator
 $Process = Get-Process sqldeveloper64W
 while (($null -ne $Process) -or ($response.Key -eq "N" -or $response.Key -eq "n")) {
-	Stop-Process $Process
+	Stop-SpecifiedProcess $Process
 	$Process = Get-Process sqldeveloper64W
 }
 
