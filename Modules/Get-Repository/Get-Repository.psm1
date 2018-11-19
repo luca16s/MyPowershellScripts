@@ -1,4 +1,4 @@
-function Initialize-Repository {
+function Get-Repository {
     <#
      .SYNOPSIS
        Script to clone repository.
@@ -34,4 +34,4 @@ function Initialize-Repository {
         }
     }
 }
-Export-ModuleMember -Function Initialize-Repository
+Export-ModuleMember -Function Get-Repository
