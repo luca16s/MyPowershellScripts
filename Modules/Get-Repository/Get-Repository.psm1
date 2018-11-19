@@ -1,3 +1,4 @@
+Import-Module Write-Log.psm1
 function Get-Repository {
     <#
      .SYNOPSIS

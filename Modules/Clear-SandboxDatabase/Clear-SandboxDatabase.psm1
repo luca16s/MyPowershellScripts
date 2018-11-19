@@ -1,3 +1,4 @@
+Import-Module Write-Log.psm1
 function Clear-SandboxDatabase {
   <#
     .SYNOPSIS
@@ -20,9 +21,20 @@ function Clear-SandboxDatabase {
   #>
 	param (
 		$VagrantUpSuceed = $true
-	)
-	if ($VagrantUpSuceed -eq $true) {
-		flyway.cmd clean
-    }
+  )
+  try {
+    if ($VagrantUpSuceed -eq $true) {
+      flyway.cmd clean
+      } 
+  }
+  catch {
+    $ErrorMessage = $_.Exception.Message
+        Write-Log "$ErrorMessage"
+  }
+  finally {
+    if ($null -eq $ErrorMessage) {
+      Write-Log $null "Succesfully cleared Sandbox Database at"   
+  }
+  }
 }
 Export-ModuleMember -Function Clear-SandboxDatabase
